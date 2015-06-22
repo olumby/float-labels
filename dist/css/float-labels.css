@@ -10,6 +10,7 @@
 
 .form-item.float-label input + label {
   position: absolute;
+  left: 0;
   top: calc(50% - 0.6em);
   opacity: 0;
   margin-left: calc(1em + 5px);
