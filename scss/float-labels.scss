@@ -1,0 +1,25 @@
+.form-item.float-label {
+  position:relative;
+
+  input {
+    height: 47px;
+    transition:padding 0.3s;
+  }
+  input+label {
+    position:absolute;
+    top: calc(50% - 0.6em);
+    opacity: 0;
+    margin-left: calc(1em + 5px);
+    font-size: 0.75em;
+    transition:top 0.3s, opacity 0.5s;
+    color: rgba(0,0,0,0.5)
+  }
+
+  input:focus {
+    padding: 1.5em 0.8em 0.5em 0.8em;
+  }
+  input:focus+label {
+    top: 7px;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,29 @@
+.form-item.float-label {
+  position: relative;
+}
+
+.form-item.float-label input {
+  height: 47px;
+  -webkit-transition: padding 0.3s;
+          transition: padding 0.3s;
+}
+
+.form-item.float-label input + label {
+  position: absolute;
+  top: calc(50% - 0.6em);
+  opacity: 0;
+  margin-left: calc(1em + 5px);
+  font-size: 0.75em;
+  -webkit-transition: top 0.3s, opacity 0.5s;
+          transition: top 0.3s, opacity 0.5s;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.form-item.float-label input:focus {
+  padding: 1.5em 0.8em 0.5em 0.8em;
+}
+
+.form-item.float-label input:focus + label {
+  top: 7px;
+  opacity: 1;
+}

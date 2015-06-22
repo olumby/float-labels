@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Float Labels</title>
+
+        <style type="text/css">
+            body { font-family: "Helvetica Neue", Helvetica, Ariel, sans-seif; }
+            #main { width: 95%; max-width: 300px; margin: 0 auto; }
+            .form-item { margin: 1.5em 0; }
+            .form-item input { font-size: 1em; border: 1px solid #ccc; height: 37px; padding: 0.8em; width: 100%; box-sizing: border-box; }
+        </style>
+
+        <link rel="stylesheet" href="dist/css/float-labels.css" media="screen">
+    </head>
+    <body>
+
+        <div id="main">
+            <div class="form-item">
+                <input type="text" name="name" placeholder="John Doe">
+            </div>
+
+            <div class="form-item float-label">
+                <input type="text" name="name" placeholder="John Doe">
+                <label for="name">Name</label>
+            </div>
+        </div>
+
+    </body>
+</html>
