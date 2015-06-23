@@ -3,13 +3,20 @@ body {
 }
 #main {
   width: 95%;
-  max-width: 300px;
+  max-width: 450px;
   margin: 0 auto;
 }
+
+pre {
+    padding: 1em;
+    background: #fefefe;
+    border: 1px solid #efefef;
+    overflow: scroll;
+}
+
 .form-item {
   margin: 1.5em 0;
 }
-
 .form-item input {
     box-sizing: border-box;
     height: 37px;
