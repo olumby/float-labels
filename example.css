@@ -26,16 +26,12 @@ pre {
     width: 100%;
 }
 
-// Customised Float Labels
-
-.form-item.custom input {
+.form-item.float-label.custom input {
+    height: 40px;
     font-size: 0.7em;
     padding: 1em;
     border: 1px solid #ccc;
     width: 100%;
-}
-.form-item.float-label.custom input {
-    height: 40px;
 }
 .form-item.float-label.custom input+label {
     margin-left: 1em;
