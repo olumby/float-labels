@@ -10,18 +10,16 @@
 
     'use strict';
 
-    //
-    // Variables
-    //
     var floatLabels = {}; // Object for public APIs
     var supports = !!document.querySelector && !!root.addEventListener; // Feature test
     var settings; // Placeholder variables
 
     // Default settings
     var defaults = {
-        selector: '.float-label'
+        selector: '.float-label',
+        jsClass: 'float-label-js', // needs to be same as CSS
+        contentAttr: 'data-content'
     };
-
 
     var extend = function(){
         for(var i=1; i<arguments.length; i++)
@@ -38,7 +36,7 @@
      */
     var setContent = function(event) {
         console.log(event.target);
-        event.target.setAttribute('data-content', event.target.value);
+        event.target.setAttribute(default.contentAttr, event.target.value);
     };
 
     /**
@@ -47,8 +45,8 @@
      * @param  {Element} el
      */
     var setupFloatLabel = function(el) {
-        el.classList.add('float-label-js');
-        el.querySelector('input').setAttribute('data-content', "");
+        el.classList.add(default.jsClass);
+        el.querySelector('input').setAttribute(defaults.contentAttr, "");
         el.addEventListener('keyup', setContent, false);
     };
 
@@ -76,16 +74,10 @@
         // Merge user options with defaults
         settings = extend({}, defaults, options);
 
-        Array.prototype.forEach.call(document.querySelectorAll('.float-label'), function(el) {
+        Array.prototype.forEach.call(document.querySelectorAll(defaults.selector), function(el) {
             setupFloatLabel(el);
         });
     };
 
-
-    //
-    // Public APIs
-    //
-
     return floatLabels;
-
 });
