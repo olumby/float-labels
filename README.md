@@ -14,4 +14,4 @@ This is a very light weight version of Float Labels. There are no dependencies, 
 
 ### License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+Float Labels is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
