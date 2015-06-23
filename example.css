@@ -14,6 +14,11 @@ pre {
     overflow: scroll;
 }
 
+hr {
+    margin:2em 0;
+    border-width: 0 0 1px 0;
+}
+
 .form-item {
   margin: 1.5em 0;
 }

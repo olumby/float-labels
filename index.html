@@ -1,59 +1,72 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Float Labels</title>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="HandheldFriendly" content="True">
-        <meta name="MobileOptimized" content="320">
+<head>
+    <meta charset="utf-8">
+    <title>Float Labels</title>
 
-        <link rel="stylesheet" href="example.css" media="screen">
-        <link rel="stylesheet" href="dist/css/float-labels.css" media="screen">
-    </head>
-    <body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
 
-        <div id="main">
-            <h3>Default Input CSS</h3>
-            <pre>.form-item input {
-    box-sizing: border-box;
-    height: 37px;
-    font-size: 1em;
-    padding: 1em;
-    border: 1px solid #ccc;
-    width: 100%;
-}</pre>
-            <div class="form-item">
-                <input type="text" name="name" placeholder="John Doe">
-            </div>
+    <link rel="stylesheet" href="example.css" media="screen">
+    <link rel="stylesheet" href="dist/css/float-labels.css" media="screen">
+</head>
 
-            <h3>Default Float Label</h3>
-            <div class="form-item float-label">
-                <input type="text" name="name" placeholder="John Doe">
-                <label for="name">Name</label>
-            </div>
+<body>
 
-            <h3>Customised Float Label</h3>
-            <div class="form-item float-label custom">
-                <input type="text" name="name" placeholder="John Doe">
-                <label for="name">Name</label>
-            </div>
+    <div id="main">
 
-            <pre>.form-item.float-label.custom input {
-    height: 40px;
-    font-size: 0.7em;
-    padding: 1em;
-    border: 1px solid #ccc;
-    width: 100%;
-}
-.form-item.float-label.custom input+label {
-    margin-left: 1em;
-}</pre>
+        <h2>HTML</h2>
+
+        <pre>&lt;div class=&quot;form-item float-label&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;name&quot; placeholder=&quot;John Doe&quot;&gt;
+    &lt;label for=&quot;name&quot;&gt;Name&lt;/label&gt;
+&lt;/div&gt;</pre>
+
+        <h2>Optional JS</h2>
+
+        <pre>floatLabels.init();</pre>
+
+        <hr>
+
+        <h3>Standard Styled Input</h3>
+        <div class="form-item">
+            <input type="text" name="name" placeholder="John Doe">
         </div>
 
-        <script src="dist/js/float-labels.js" charset="utf-8"></script>
-        <script type="text/javascript">
-            floatLabels.init({});
-        </script>
-    </body>
+        <h3>CSS &amp; JS Float Label</h3>
+        <div class="form-item float-label javascript">
+            <input type="text" name="name" placeholder="John Doe">
+            <label for="name">Name</label>
+        </div>
+
+        <h3>CSS Float Label</h3>
+        <div class="form-item float-label">
+            <input type="text" name="name" placeholder="John Doe">
+            <label for="name">Name</label>
+        </div>
+
+        <h3>CSS &amp; JS Float Label Restyled</h3>
+        <div class="form-item float-label custom javascript">
+            <input type="text" name="name" placeholder="John Doe">
+            <label for="name">Name</label>
+        </div>
+
+        <h3>CSS Float Label Restyled</h3>
+        <div class="form-item float-label custom">
+            <input type="text" name="name" placeholder="John Doe">
+            <label for="name">Name</label>
+        </div>
+
+    </div>
+
+    <script src="dist/js/float-labels.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        floatLabels.init({
+            selector: '.float-label.javascript'
+        });
+    </script>
+</body>
+
 </html>
