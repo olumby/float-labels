@@ -1,14 +1,14 @@
 (function (root, factory) {
-	if ( typeof define === 'function' && define.amd ) {
-		define([], factory(root));
-	} else if ( typeof exports === 'object' ) {
-		module.exports = factory(root);
-	} else {
-		root.floatLabels = factory(root);
-	}
+    if ( typeof define === 'function' && define.amd ) {
+        define([], factory(root));
+    } else if ( typeof exports === 'object' ) {
+        module.exports = factory(root);
+    } else {
+        root.floatLabels = factory(root);
+    }
 })(typeof global !== "undefined" ? global : this.window || this.global, function (root) {
 
-	'use strict';
+    'use strict';
 
     //
     // Variables
@@ -19,10 +19,7 @@
 
     // Default settings
     var defaults = {
-        someVar: 123,
-        initClass: 'js-floatLabels',
-        callbackBefore: function() {},
-        callbackAfter: function() {}
+        selector: '.float-label'
     };
 
 
@@ -34,6 +31,26 @@
         return arguments[0];
     }
 
+    /**
+     * Set content attribute
+     * @private
+     * @param  {Event} event
+     */
+    var setContent = function(event) {
+        console.log(event.target);
+        event.target.setAttribute('data-content', event.target.value);
+    };
+
+    /**
+     * Add event listeners for float labels
+     * @private
+     * @param  {Element} el
+     */
+    var setupFloatLabel = function(el) {
+        el.classList.add('float-label-js');
+        el.querySelector('input').setAttribute('data-content', "");
+        el.addEventListener('keyup', setContent, false);
+    };
 
     /**
      * Destroy the current initialization.
@@ -59,13 +76,8 @@
         // Merge user options with defaults
         settings = extend({}, defaults, options);
 
-        Array.prototype.forEach.call(document.getElementsByClassName('float-label'), function(el) {
-            var element = el.getElementsByTagName('input')[0]
-            element.classList.add('float-label-js');
-            element.setAttribute('data-content', element.value);
-            element.onkeyup = function () {
-                this.setAttribute('data-content', this.value);
-            }
+        Array.prototype.forEach.call(document.querySelectorAll('.float-label'), function(el) {
+            setupFloatLabel(el);
         });
     };
 

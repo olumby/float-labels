@@ -17,10 +17,10 @@
     color: rgba(0,0,0,0.5)
   }
 
-  input:focus, input.float-label-js:not([data-content=""]) {
+  input:focus, &.float-label-js input:not([data-content=""]) {
     padding: 1.5em 1em 0.5em 1em;
   }
-  input:focus+label, input.float-label-js:not([data-content=""])+label, {
+  input:focus+label, &.float-label-js input:not([data-content=""])+label, {
     top: 7px;
     opacity: 1;
   }
