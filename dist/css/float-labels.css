@@ -14,18 +14,18 @@
   left: 0;
   top: calc(50% - 0.6em);
   opacity: 0;
-  margin-left: 1.5em;
+  margin-left: 1.4em;
   font-size: 0.75em;
   -webkit-transition: top 0.3s, opacity 0.5s;
           transition: top 0.3s, opacity 0.5s;
   color: rgba(0, 0, 0, 0.5);
 }
 
-.form-item.float-label input:focus {
+.form-item.float-label input:focus, .form-item.float-label input.float-label-js:not([data-content=""]) {
   padding: 1.5em 1em 0.5em 1em;
 }
 
-.form-item.float-label input:focus + label {
+.form-item.float-label input:focus + label, .form-item.float-label input.float-label-js:not([data-content=""]) + label {
   top: 7px;
   opacity: 1;
 }

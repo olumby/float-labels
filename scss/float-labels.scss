@@ -11,16 +11,16 @@
     left: 0;
     top: calc(50% - 0.6em);
     opacity: 0;
-    margin-left: 1.5em;
+    margin-left: 1.4em;
     font-size: 0.75em;
     transition:top 0.3s, opacity 0.5s;
     color: rgba(0,0,0,0.5)
   }
 
-  input:focus {
+  input:focus, input.float-label-js:not([data-content=""]) {
     padding: 1.5em 1em 0.5em 1em;
   }
-  input:focus+label {
+  input:focus+label, input.float-label-js:not([data-content=""])+label, {
     top: 7px;
     opacity: 1;
   }
