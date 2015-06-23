@@ -1,0 +1,35 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Ariel, sans-seif;
+}
+#main {
+  width: 95%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.form-item {
+  margin: 1.5em 0;
+}
+
+.form-item input {
+    box-sizing: border-box;
+    height: 37px;
+    font-size: 1em;
+    padding: 1em;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+// Customised Float Labels
+
+.form-item.custom input {
+    font-size: 0.7em;
+    padding: 1em;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+.form-item.float-label.custom input {
+    height: 40px;
+}
+.form-item.float-label.custom input+label {
+    margin-left: 1em;
+}
