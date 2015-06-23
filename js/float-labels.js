@@ -36,7 +36,7 @@
      */
     var setContent = function(event) {
         console.log(event.target);
-        event.target.setAttribute(default.contentAttr, event.target.value);
+        event.target.setAttribute(defaults.contentAttr, event.target.value);
     };
 
     /**
@@ -45,7 +45,7 @@
      * @param  {Element} el
      */
     var setupFloatLabel = function(el) {
-        el.classList.add(default.jsClass);
+        el.classList.add(defaults.jsClass);
         el.querySelector('input').setAttribute(defaults.contentAttr, "");
         el.addEventListener('keyup', setContent, false);
     };
