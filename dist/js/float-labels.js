@@ -35,7 +35,6 @@
      * @param  {Event} event
      */
     var setContent = function(event) {
-        console.log(event.target);
         event.target.setAttribute(defaults.contentAttr, event.target.value);
     };
 
@@ -72,7 +71,7 @@
         // Destroy any existing initializations
         floatLabels.destroy();
         // Merge user options with defaults
-        settings = extend({}, defaults, options);
+        settings = extend(defaults, options);
 
         Array.prototype.forEach.call(document.querySelectorAll(defaults.selector), function(el) {
             setupFloatLabel(el);
