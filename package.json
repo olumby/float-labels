@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "dependencies": {},
   "devDependencies": {
-    "gulp": "3.8.11",
+    "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",
     "gulp-csso": "^1.0.0",
     "gulp-notify": "2.2.0",
@@ -16,7 +16,7 @@
   },
   "license": "MIT",
   "repository": {
-      "type": "git",
-      "url": "https://github.com/olumby/float-labels"
+    "type": "git",
+    "url": "https://github.com/olumby/float-labels"
   }
 }
